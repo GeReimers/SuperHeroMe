@@ -1,6 +1,7 @@
 import { Box, Container, Flex } from "@chakra-ui/core";
 import React from "react";
 import AddNewPost from "./add-new-post";
+import {  Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -10,6 +11,17 @@ const Navbar = () => {
           <AddNewPost />
         </Flex>
       </Container>
+      <div>
+    <li>
+      <Link to="/home">Home</Link>
+    </li>
+    <li>
+      <Link to="/profile">Profile</Link>
+    </li>
+    <li>
+      <Link to="/challenge">Challenge of the day</Link>
+    </li>
+    </div>
     </Box>
   );
 };

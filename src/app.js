@@ -4,6 +4,18 @@ import Navbar from "./components/navbar";
 import Post from "./components/post";
 import db from "./lib/firebase";
 
+import {
+	BrowserRouter as Router,
+	Routes,
+	Route,
+	Link
+} from 'react-router-dom';
+import Home from "./components/home";
+import Profile from "./components/profile";
+import Challenge from "./components/challenge";
+
+
+
 const App = () => {
   const [posts, setPosts] = useState([]);
   const [isLoading, setLoading] = useState(true);
@@ -55,16 +67,26 @@ const App = () => {
 
   return (
     <>
+    <Router>
       <Navbar />
+      
       <Container maxW="md" centerContent p={8}>
         <VStack spacing={8} w="100%">
           {posts.map((post) => (
             <Post post={post} key={post.id} />
           ))}
         </VStack>
+        <Routes>
+        <Route path='/home' element = {<Home/>} />
+        <Route path='/profile' element = {<Profile/>} />
+        <Route path='/challenge' element = {<Challenge/>} />
+        </Routes>
       </Container>
+      
+      </Router>
     </>
   );
+
 };
 
 export default App;

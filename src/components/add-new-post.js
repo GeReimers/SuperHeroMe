@@ -42,17 +42,17 @@ const AddNewPost = () => {
   return (
     <>
       <Button onClick={onOpen} colorScheme="blue">
-        Add new post
+        Share heroic act
       </Button>
 
       <Modal onClose={onClose} isOpen={isOpen} isCentered>
         <ModalOverlay>
           <ModalContent>
-            <ModalHeader>Add new post</ModalHeader>
+            <ModalHeader>Share heroic act</ModalHeader>
             <ModalCloseButton />
             <ModalBody>
               <FormControl id="post-title">
-                <FormLabel>Post title</FormLabel>
+                <FormLabel>You did something selfless today? Then share your heroic deed here!</FormLabel>
                 <Textarea
                   type="post-title"
                   value={title}

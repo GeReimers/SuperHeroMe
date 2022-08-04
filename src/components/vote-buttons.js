@@ -2,7 +2,7 @@ import { IconButton, Text, VStack } from "@chakra-ui/core";
 import React, { useEffect, useState } from "react";
 import { FiArrowDown, FiArrowUp } from "react-icons/fi";
 import db from "../lib/firebase";
-
+//renders vote buttons; clicking a vote button calls handleClick()function to save value to our db
 const VoteButtons = ({ post }) => {
   const [isVoting, setVoting] = useState(false);
   const [votedPosts, setVotedPosts] = useState([]);
@@ -28,6 +28,7 @@ const VoteButtons = ({ post }) => {
     // user has voted. Fetch the previously voted items from localStorage. See
     // https://stackoverflow.com/a/52607524/1928724 on why we need "JSON.parse"
     // and update the item on localStorage.
+    //Tracking id of post that has been voted in local storage
     const previousVotes = votedPosts;
     previousVotes.push(postId);
 

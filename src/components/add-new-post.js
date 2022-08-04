@@ -17,6 +17,9 @@ import React, { useState } from "react";
 import db from "../lib/firebase";
 
 const AddNewPost = () => {
+  //useDisclosure hook to open/close (make visible) component
+  // Default state of isOpen is false, meaning component is not visible
+  // onOpen & onClose as callback function to set isOpen to true or false
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [title, setTitle] = useState("");
   const [isSaving, setSaving] = useState(false);

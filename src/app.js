@@ -17,11 +17,12 @@ import Challenge from "./components/challenge";
 
 
 const App = () => {
+  //useState Hook used to track state/data within our app -> acepts an initial state and returns two values: current state and function that updates state
   const [posts, setPosts] = useState([]);
   const [isLoading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Hook to handle the initial fetching of posts
+    // use Effect hook to handle the initial fetching of posts
 
     db.collection("posts")
       .orderBy("createdAt", "desc")
@@ -31,7 +32,7 @@ const App = () => {
           id: doc.id,
           ...doc.data(),
         }));
-
+      // Store fetched posts from database to setPost state
         setPosts(data);
         setLoading(false);
       });
@@ -40,7 +41,7 @@ const App = () => {
   useEffect(() => {
     // Hook to handle the real-time updating of posts whenever there is a
     // change in the datastore (https://firebase.google.com/docs/firestore/query-data/listen#view_changes_between_snapshots)
-
+    // otherwise we would need to manually refresh website
     db.collection("posts")
       .orderBy("createdAt", "desc")
       .onSnapshot((querySnapshot) => {
@@ -65,8 +66,8 @@ const App = () => {
     );
   }
 
-  return (
-    <>
+  return ( //rendering lists of post; post.js receives posts and displays it
+    <> 
     <Router>
       <Navbar />
       

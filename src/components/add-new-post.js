@@ -43,6 +43,7 @@ const AddNewPost = () => {
   };
 
   return (
+    // <> Fragment -> empty element that allows a function to return multiple things instead of one
     <>
       <Button onClick={onOpen} colorScheme="blue">
         Share heroic act

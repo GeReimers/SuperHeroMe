@@ -67,25 +67,21 @@ const App = () => {
   }
 
   return ( //rendering lists of post; post.js receives posts and displays it
-    <> 
-    <Router>
-      <Navbar />
-      
-      <Container maxW="md" centerContent p={8}>
-        <VStack spacing={8} w="100%">
-          {posts.map((post) => (
-            <Post post={post} key={post.id} />
-          ))}
-        </VStack>
-        <Routes>
-        <Route path='/home' element = {<Home/>} />
-        <Route path='/profile' element = {<Profile/>} />
-        <Route path='/challenge' element = {<Challenge/>} />
-        </Routes>
-      </Container>
-      
-      </Router>
-    </>
+  <> 
+  <Router>
+    <Navbar />
+    
+    <Container maxW="md" centerContent p={8}>
+
+      <Routes>
+      <Route path='/home' element = {<Home/>} />
+      <Route path='/profile' element = {<Profile/>} />
+      <Route path='/challenge' element = {<Challenge/>} />
+      </Routes>
+    </Container>
+    
+    </Router>
+  </>
   );
 
 };

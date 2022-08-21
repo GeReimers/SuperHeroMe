@@ -4,6 +4,7 @@ import Navbar from "./components/navbar";
 import Post from "./components/post";
 import db from "./lib/firebase";
 
+
 import {
 	BrowserRouter as Router,
 	Routes,
@@ -13,6 +14,7 @@ import {
 import Home from "./components/home";
 import Profile from "./components/profile";
 import Challenge from "./components/challenge";
+import Startpage from "./components/startpage";
 
 
 
@@ -77,6 +79,7 @@ const App = () => {
       <Route path='/home' element = {<Home/>} />
       <Route path='/profile' element = {<Profile/>} />
       <Route path='/challenge' element = {<Challenge/>} />
+      <Route path='/startpage' element = {<Startpage/>} />
       </Routes>
     </Container>
     

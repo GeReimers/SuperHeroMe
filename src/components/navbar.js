@@ -12,8 +12,11 @@ const Navbar = () => {
         </Flex>
       </Container>
       <div>
+      <li>
+      <Link to="/startpage">Start</Link>
+    </li>
     <li>
-      <Link to="/home">Home</Link>
+      <Link to="/home">HeroFeed</Link>
     </li>
     <li>
       <Link to="/profile">Profile</Link>

@@ -1,34 +1,66 @@
 import React from 'react';
-import { Input } from '@chakra-ui/core';
+/*import { Input } from '@chakra-ui/core';*/
 
-function Profile (){
+import {
+	Button,
+	Checkbox,
+	Flex,
+	FormControl,
+	FormLabel,
+	Heading,
+	Input,
+	Link,
+	Stack,
+	Image,
+  } from '@chakra-ui/core';
+  
+  export default function Profile() {
 	return (
-		<div>
-		  <h1>Become a Superhero!</h1>
-		  <h4>Please enter details to sign up</h4>
-		  <br></br>
-		  <div className="sign_up_input_field">
-		  <form>
-			<label>Your Superhero Name
-			<Input placeholder='Be creative! Batman1 does not count!'/>
-			</label>
-			<label>Email
-			<Input placeholder='Not oly for fan mail!'/>
-			</label>
-			<label>Password
-			<br></br>
-			<Input placeholder='The key to your secret identity!'/>
-			<br></br>
-			</label>
-			<label>Confirm Password
-			<br></br>
-			<Input placeholder='One more time!'/>
-			<br></br>
-			</label>
-		  </form>
-		  </div>
-		</div>
-	  )
-	}
+	  <Stack minH={'100vh'} direction={{ base: 'column', md: 'row' }}>
+		<Flex p={8} flex={1} align={'center'} justify={'center'}>
+		  <Stack spacing={4} w={'full'} maxW={'md'}>
+			<Heading fontSize={'2xl'}>Become a Superhero!</Heading>
+			<Heading fontSize={'l'}>Batman or Wonderwoman? Tell us who you are!</Heading>
+			<FormControl id="text">
+			  <FormLabel>Your superhero name</FormLabel>
+			  <Input type="text" />
+			</FormControl>
+			<FormControl id="email">
+			  <FormLabel>Email address</FormLabel>
+			  <Input type="email" />
+			</FormControl>
+			<FormControl id="password">
+			  <FormLabel>Password</FormLabel>
+			  <Input type="password" />
+			</FormControl>
+			<FormControl id="password">
+			  <FormLabel>Confirm Password</FormLabel>
+			  <Input type="password" />
+			</FormControl>
+			<Stack spacing={6}>
+			  <Stack
+				direction={{ base: 'column', sm: 'row' }}
+				align={'start'}
+				justify={'space-between'}>
+				<Checkbox>Remember me</Checkbox>
+				<Link color={'red.50'}>Forgot password?</Link>
+			  </Stack>
+			  <Button colorScheme={'red'} variant={'solid'}>
+				Become a superhero!
+			  </Button>
+			</Stack>
+		  </Stack>
+		</Flex>
+		<Flex flex={1}>
+		  <Image
+			alt={'Login Image'}
+			/*objectFit={'cover'}*/
+			src={
+				require("../images/hero_login.PNG")
+			}
+		  />
+		</Flex>
+	  </Stack>
+	);
+  }
 
-export default Profile;

@@ -80,7 +80,7 @@ const VoteButtons = ({ post }) => {
       <VStack>
         <IconButton
           size="lg"
-          colorScheme="purple"
+          colorScheme="green"
           aria-label="Upvote"
           icon={<FiArrowUp />}
           onClick={() => handleClick("upvote")}

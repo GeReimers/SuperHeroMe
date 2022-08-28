@@ -51,13 +51,14 @@ import {
 			</Stack>
 		  </Stack>
 		</Flex>
-		<Flex flex={1}>
+		<Flex w='300px' h='300px'>
 		  <Image
 			alt={'Login Image'}
 			/*objectFit={'cover'}*/
 			src={
 				require("../images/hero_login.PNG")
 			}
+            
 		  />
 		</Flex>
 	  </Stack>

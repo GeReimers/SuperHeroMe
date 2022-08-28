@@ -14,6 +14,7 @@ import {
 
 
 
+
 const Home = () => {
   //useState Hook used to track state/data within our app -> acepts an initial state and returns two values: current state and function that updates state
   const [posts, setPosts] = useState([]);

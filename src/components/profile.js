@@ -19,6 +19,14 @@ import {
 	  <Stack minH={'100vh'} direction={{ base: 'column', md: 'row' }}>
 		<Flex p={8} flex={1} align={'center'} justify={'center'}>
 		  <Stack spacing={4} w={'full'} maxW={'md'}>
+		  <Image
+			alt={'Login Image'}
+			/*objectFit={'cover'}*/
+			src={
+				require("../images/hero_login.PNG")
+			}
+            
+		  />
 			<Heading fontSize={'2xl'}>Become a Superhero!</Heading>
 			<Heading fontSize={'l'}>Batman or Wonderwoman? Tell us who you are!</Heading>
 			<FormControl id="text">
@@ -50,16 +58,6 @@ import {
 			  </Button>
 			</Stack>
 		  </Stack>
-		</Flex>
-		<Flex w='300px' h='300px'>
-		  <Image
-			alt={'Login Image'}
-			/*objectFit={'cover'}*/
-			src={
-				require("../images/hero_login.PNG")
-			}
-            
-		  />
 		</Flex>
 	  </Stack>
 	);

@@ -1,16 +1,16 @@
 import React from 'react';
 import "./../index.css";
-import {Box, Container, Flex, Spinner, VStack, Center } from "@chakra-ui/core";
+import {Box, Container, Flex, Spinner, VStack, Center, Heading } from "@chakra-ui/core";
 
 
 function startpage (){
 	return (
     <Container maxW="container.xl" p={0} centerContent>
         <Flex py={2}>
-            <text>Is it a bird? Is it a plane? Is it superman? No, it's <b>you</b>!</text>
+            <Heading fontSize={'2xl'}>Is it a bird? Is it a plane? Is it superman? No, it's you!</Heading>
         </Flex>
         <Flex py={2} >
-            <text>Post your good deeds or get inspired by the deeds of other local superheroes!</text>  
+            <Heading fontSize={'l'}>Post your good deeds or get inspired by the deeds of other local superheroes!</Heading>  
         </Flex>
         <Flex w="100vh" py={2} >
             <VStack m={2}>

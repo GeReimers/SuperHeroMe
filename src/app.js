@@ -16,6 +16,8 @@ import Profile from "./components/profile";
 import Challenge from "./components/challenge";
 import Startpage from "./components/startpage";
 
+import AvatarWithRipple from "./avatar";
+
 
 
 
